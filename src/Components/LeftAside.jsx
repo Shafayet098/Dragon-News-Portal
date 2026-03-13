@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
+import './LeftAside.css'
 
 
 const LeftAside = () => {
@@ -15,7 +16,7 @@ const LeftAside = () => {
                 {
                     categories.map(category=>
                     <NavLink className={'btn bg-white border-0 mb-1 text-accent hover:bg-slate-100 font-semibold w-full'} key={category.id}
-                    to={`/category/${category.id}`}>{category.name}</NavLink>)
+                    to={`/categories/${category.id}`}>{category.name}</NavLink>)
                 }
             </div>
         </div>

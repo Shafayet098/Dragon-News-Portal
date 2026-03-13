@@ -4,6 +4,8 @@ import Error from "./Error";
 import Home from "../Pages/Home";
 import Abouts from "../Pages/Abouts";
 import Career from "../Pages/Career";
+import NewsContainer from "../Components/NewsContainer";
+import { Component } from "react";
 
 export const router = createBrowserRouter([
     {
@@ -11,14 +13,18 @@ export const router = createBrowserRouter([
         Component: Root,
         children: [
             {
-                index: true,
+                path:'',
                 Component: Home,
                 children:[
                     {
-                        
-                    }
+                path: 'categories/:id',
+                loader:()=>fetch('/news.json'),
+                Component: NewsContainer,
+            },
                 ]
             },
+            
+
             {
                 path: 'about',
                 Component: Abouts,

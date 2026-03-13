@@ -7,9 +7,12 @@ const Nav = () => {
         <div className="flex justify-center items-center relative">
             <div className=""></div>
             <div className="nav flex gap-5 text-accent">
-                <NavLink className={({isActive})=>isActive && 'underline'} to="/">Home</NavLink>
-                <NavLink className={({isActive})=>isActive && 'underline'} to="/about">About</NavLink>
-                <NavLink className={({isActive})=>isActive && 'underline'} to="/career">Career</NavLink>
+                <NavLink className={({ isActive}) =>
+                     isActive ? "underline" : ""} to="/">Home</NavLink>
+                <NavLink className={({ isActive}) =>
+                     isActive ? "underline" : ""} to="/about">About</NavLink>
+                <NavLink className={({ isActive}) =>
+                     isActive ? "underline" : ""} to="/career">Career</NavLink>
             </div>
             <div className="login-btn flex gap-5 absolute right-0">
                 <img src={user} alt="" />
