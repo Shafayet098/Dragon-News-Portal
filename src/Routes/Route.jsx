@@ -6,7 +6,7 @@ import Abouts from "../Pages/Abouts";
 import Career from "../Pages/Career";
 import NewsContainer from "../Components/NewsContainer";
 import { Component } from "react";
-import NewsDetails from "../Components/NewsDetails";
+import NewsDetailsContainer from "../Components/NewsDetailsContainer";
 
 export const router = createBrowserRouter([
     {
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
     {
         path: '/newsdetails/:id',
         loader:()=>fetch('/news.json'),
-        Component: NewsDetails,
+        Component: NewsDetailsContainer,
     },
     {
         path: '/auth',
