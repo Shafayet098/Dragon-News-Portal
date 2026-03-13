@@ -5,13 +5,13 @@ import Theme from './Theme';
 
 const Header = () => {
     return (
-        <div className=" relative flex justify-center flex-col items-center gap-3 ">
+        <div className=" relative flex justify-center flex-col items-center gap-2 ">
             <img className="w-[400px]" src={logo} alt="" />
             <p className="text-accent">Journalism Without Fear or Favour</p>
 
             <div className="">
                 <p className="font-semibold text-accent">
-                    {dateFormat("Jun 9 2007", "fullDate")}
+                    {dateFormat(new Date(), "fullDate")}
                 </p>
                 <div className="absolute  right-16 top-8">
                     <Theme></Theme>

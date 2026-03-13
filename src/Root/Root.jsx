@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Components/Header';
-import Marquee from '../Components/Marquee';
+import Marquee from '../Components/Marquees';
 import Nav from '../Components/Nav';
 import { Outlet } from 'react-router';
 import LeftAside from '../Components/LeftAside';
@@ -13,14 +13,16 @@ const Root = () => {
                 <div>
                     <Header></Header>
                 </div>
-                <div>
-                    <Marquee></Marquee>
-                </div>
-                <div>
-                    <Nav></Nav>
-                </div>
+                <section className='max-w-11/12 mx-auto'>
+                    <div className='mt-1 '>
+                        <Marquee></Marquee>
+                    </div>
+                    <div className='mt-4'>
+                        <Nav></Nav>
+                    </div>
+                </section>
             </header>
-            <main>
+            <main classname>
                 <aside>
                     <LeftAside></LeftAside>
                 </aside>
