@@ -22,17 +22,9 @@ const Root = () => {
                     </div>
                 </section>
             </header>
-            <main classname>
-                <aside>
-                    <LeftAside></LeftAside>
-                </aside>
-                <section>
-                    <Outlet></Outlet>
-                </section>
-                <aside>
-                    <RightAside></RightAside>
-                </aside>
-            </main>
+            <section>
+                <Outlet></Outlet>
+            </section>
         </div>
     );
 };
