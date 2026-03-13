@@ -1,25 +1,26 @@
-// import React, { useState } from 'react';
-import { Link } from 'react-router';
+import React, { use, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
+import { AuthContext } from './../Context/AuthContext';
 
 const Login = () => {
-    // const { signIn } = use(AuthContext);
-    // const location = useLocation();
-    // const navigate = useNavigate();
-    // const [error, setError] = useState('')
+    const { signIn } = use(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [error, setError] = useState('')
     console.log(location)
     const handleSignIn = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        // signIn(email, password)
-        //     .then(res => {
-        //         console.log(res)
-        //         navigate(location?.state || '/')
-        //     }).catch(err => {
-        //         console.log(err)
-        //         const errorMessage = err.message;
-        //         setError(errorMessage)
-        //     })
+        signIn(email, password)
+            .then(res => {
+                console.log(res)
+                navigate(location?.state || '/')
+            }).catch(err => {
+                console.log(err)
+                const errorMessage = err.message;
+                setError(errorMessage)
+            })
     }
     return (
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl  mx-auto mt-4 pt-4">
@@ -33,7 +34,7 @@ const Login = () => {
                     <div><a className="link link-hover">Forgot password?</a></div>
                     <button className="btn btn-neutral mt-4">Login</button>
                 </form>
-                <p className='text-red-400'>{'error'}</p>
+                <p className='text-red-400'>{error}</p>
                 <p>If you are new, please <Link to={'/auth/register'} className='underline text-blue-500'>Register</Link></p>
             </div>
         </div>

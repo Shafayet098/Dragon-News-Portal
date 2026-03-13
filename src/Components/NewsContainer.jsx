@@ -1,15 +1,15 @@
 // import React, { useState } from 'react';
-import { Navigate, useLoaderData, useParams } from 'react-router';
+import { Navigate, useLoaderData, useNavigation, useParams } from 'react-router';
 import NewsCard from './NewsCard';
 import { useEffect, useState } from 'react';
+import Loading from './Loading';
 
 const NewsContainer = () => {
     const { id } = useParams();
     console.log(id);
     const [news, setNews] = useState([])
     const data = useLoaderData();
-    
-    
+    const navigation = useNavigation();
     
     useEffect(() => {
         setNews(data)
@@ -28,6 +28,9 @@ const NewsContainer = () => {
     }, [id])
 
     console.log(data)
+    if(navigation.state=='loading'){
+        return <Loading></Loading>
+    }
 
     return (
         <div className='pr-2'>
