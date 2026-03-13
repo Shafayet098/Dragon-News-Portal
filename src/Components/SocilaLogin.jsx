@@ -5,10 +5,17 @@ import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../Context/AuthContext';
 
 const SocilaLogin = () => {
-    const {signInWithGoogle} = use(AuthContext)
+    const {signInWithGoogle,signInWIthGithub} = use(AuthContext)
 
     const handleGoogleSignIn =()=>{
         signInWithGoogle().then(res=>{
+            console.log(res)
+        }).catch(err=>{
+            console.log(err)
+        })
+    }
+    const handleGitHubLogin=()=>{
+        signInWIthGithub().then(res=>{
             console.log(res)
         }).catch(err=>{
             console.log(err)
@@ -20,7 +27,7 @@ const SocilaLogin = () => {
             <div className='flex flex-col gap-1'>
                 <button onClick={handleGoogleSignIn} className='btn btn-outline btn-secondary'>
                     <FcGoogle size={25}></FcGoogle> Login With Google</button>
-                <button className='btn btn-outline btn-primary'>
+                <button onClick={handleGitHubLogin} className='btn btn-outline btn-primary'>
                     <FaGithub size={25}></FaGithub> Login With GitHub</button>
             </div>
         </div>
