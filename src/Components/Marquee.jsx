@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Error = () => {
+const Marquee = () => {
     return (
         <div>
-NOt Found    
+            Marquee
         </div>
     );
 };
 
-export default Error;
+export default Marquee;

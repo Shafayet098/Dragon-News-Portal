@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Error = () => {
+const RightAside = () => {
     return (
         <div>
-NOt Found    
+            RightAside
         </div>
     );
 };
 
-export default Error;
+export default RightAside;

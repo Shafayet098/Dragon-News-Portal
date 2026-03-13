@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Error = () => {
+const Home = () => {
     return (
         <div>
-NOt Found    
+            Home
         </div>
     );
 };
 
-export default Error;
+export default Home;

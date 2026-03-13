@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Error = () => {
+const Nav = () => {
     return (
         <div>
-NOt Found    
+            Nav
         </div>
     );
 };
 
-export default Error;
+export default Nav;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Error = () => {
+const LeftAside = () => {
     return (
         <div>
-NOt Found    
+            LeftAside
         </div>
     );
 };
 
-export default Error;
+export default LeftAside;
